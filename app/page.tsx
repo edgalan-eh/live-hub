@@ -81,29 +81,27 @@ function NavigationMapPin({ className }: { className?: string }) {
   );
 }
 
+function Logo({ textClass = "text-[#ff004f]" }: { textClass?: string }) {
+  return (
+    <div className="grid-cols-[max-content] grid-rows-[max-content] inline-grid leading-[0] not-italic place-items-start relative shrink-0">
+      <p className={`col-1 font-['Shuriken_Boy_Std',sans-serif] leading-[normal] ml-[136px] md:ml-[162px] lg:ml-[203.91px] mt-0 relative row-1 ${textClass} text-[32px] md:text-[38px] lg:text-[47.852px] whitespace-nowrap`}>.</p>
+      <p className={`col-1 font-['Shuriken_Boy_Std',sans-serif] leading-[normal] ml-0 mt-0 relative row-1 ${textClass} text-[32px] md:text-[38px] lg:text-[47.852px] whitespace-nowrap`}>live</p>
+      <p className="col-1 font-['Shuriken_Boy_Std',sans-serif] leading-[normal] ml-[67px] md:ml-[80px] lg:ml-[100.5px] mt-0 relative row-1 text-[#ebe610] text-[32px] md:text-[38px] lg:text-[47.852px] whitespace-nowrap">hub</p>
+      <p className="col-1 font-['BC_Barell',sans-serif] leading-[normal] ml-[2px] mt-[30.5px] md:mt-[36px] lg:mt-[45.66px] relative row-1 text-[11.74px] md:text-[13.95px] lg:text-[17.564px] text-white tracking-[0.94px] md:tracking-[1.115px] lg:tracking-[1.4051px] w-[145px] md:w-[172px] lg:w-[217.114px]">estúdio e performance</p>
+    </div>
+  );
+}
+
 export default function Home() {
   return (
     <div className="bg-[#030001] content-stretch flex flex-col items-start relative w-full">
       <div className="content-stretch flex flex-col items-center justify-center relative shrink-0 w-full" style={{ backgroundImage: "linear-gradient(90deg, rgba(0, 0, 0, 0.2) 0%, rgba(0, 0, 0, 0.2) 100%), linear-gradient(42.686932291193614deg, rgba(19, 1, 6, 0.5) 34.248%, rgba(49, 24, 31, 0.5) 89.917%)" }}>
-        <div className="content-stretch flex flex-col h-[120px] items-center justify-center px-[40px] relative shrink-0 w-[1512px]">
+        <div className="content-stretch flex flex-col min-h-[80px] lg:h-[120px] items-center justify-center px-[16px] sm:px-[24px] lg:px-[40px] relative shrink-0 w-full">
           <div className="content-stretch flex flex-[1_0_0] gap-[10px] items-center max-w-[1600px] min-h-px py-[24px] relative w-full">
-            <div className="grid-cols-[max-content] grid-rows-[max-content] inline-grid leading-[0] not-italic place-items-start relative shrink-0">
-              <p className="col-1 font-['Shuriken_Boy_Std',sans-serif] leading-[normal] ml-[203.91px] mt-0 relative row-1 text-[#ff004f] text-[47.852px] whitespace-nowrap">
-                .
-              </p>
-              <p className="col-1 font-['Shuriken_Boy_Std',sans-serif] leading-[normal] ml-0 mt-0 relative row-1 text-[#ff004f] text-[47.852px] whitespace-nowrap">
-                live
-              </p>
-              <p className="col-1 font-['Shuriken_Boy_Std',sans-serif] leading-[normal] ml-[100.5px] mt-0 relative row-1 text-[#ebe610] text-[47.852px] whitespace-nowrap">
-                hub
-              </p>
-              <p className="col-1 font-['BC_Barell',sans-serif] leading-[normal] ml-[2.89px] mt-[45.66px] relative row-1 text-[17.564px] text-white tracking-[1.4051px] w-[217.114px]">
-                estúdio e performance
-              </p>
-            </div>
+            <Logo />
             <div className="content-stretch flex flex-[1_0_0] items-center justify-end min-w-px overflow-clip p-[7.113px] relative">
               <div className="content-stretch flex gap-[7.113px] items-center justify-center relative rounded-[56.906px] shrink-0">
-                <div className="content-stretch flex font-['Blinker',sans-serif] font-semibold gap-[56.906px] items-center justify-center leading-[normal] not-italic px-[40px] py-[16px] relative rounded-[40px] shrink-0 text-[16px] text-white uppercase whitespace-nowrap">
+                <div className="hidden lg:flex font-['Blinker',sans-serif] font-semibold gap-[32px] xl:gap-[56.906px] items-center justify-center leading-[normal] not-italic px-[20px] xl:px-[40px] py-[16px] relative rounded-[40px] shrink-0 text-[16px] text-white uppercase whitespace-nowrap">
                   <p className="relative shrink-0">
                     start
                   </p>
@@ -134,9 +132,9 @@ export default function Home() {
             </div>
           </div>
         </div>
-        <div className="content-stretch flex h-[776px] items-center justify-center px-[40px] relative shrink-0 w-full">
-          <div className="content-stretch flex flex-[1_0_0] gap-[100px] h-full items-start max-w-[1280px] min-w-px relative">
-            <div className="content-stretch flex flex-[1_0_0] flex-col gap-[80px] h-full items-start justify-center max-w-[1280px] min-w-px relative">
+        <div className="content-stretch flex min-h-[600px] lg:h-[776px] items-center justify-center px-[16px] sm:px-[24px] lg:px-[40px] py-[60px] lg:py-0 relative shrink-0 w-full">
+          <div className="content-stretch flex flex-col lg:flex-row flex-[1_0_0] gap-[48px] lg:gap-[100px] items-center lg:items-start max-w-[1280px] min-w-px relative w-full">
+            <div className="content-stretch flex w-full lg:flex-[1_0_0] flex-col gap-[48px] lg:gap-[80px] items-start justify-center max-w-[1280px] min-w-px relative">
               <div className="content-stretch flex flex-col gap-[40px] items-start relative shrink-0 w-full">
                 <div className="content-stretch flex flex-col gap-[40px] items-start relative shrink-0 w-full">
                   <motion.div className="bg-[rgba(235,230,16,0.1)] border border-[rgba(254,212,0,0.3)] border-solid content-stretch drop-shadow-[0px_0px_15px_rgba(254,212,0,0.2)] flex gap-[8px] items-center px-[17px] py-[5px] relative rounded-[9999px] shrink-0" variants={fadeUp} initial="hidden" animate="visible" custom={0}>
@@ -146,7 +144,7 @@ export default function Home() {
                     </p>
                   </motion.div>
                   <motion.div className="content-stretch flex flex-col items-start relative shrink-0 w-full" variants={fadeUp} initial="hidden" animate="visible" custom={0.15}>
-                    <div className="flex flex-col font-['Blinker',sans-serif] font-normal justify-center leading-[0] not-italic relative shrink-0 text-[64px] text-white tracking-[-1.6426px] w-full">
+                    <div className="flex flex-col font-['Blinker',sans-serif] font-normal justify-center leading-[0] not-italic relative shrink-0 text-[36px] sm:text-[48px] lg:text-[64px] text-white tracking-[-1.6426px] w-full">
                       <p>
                         <span className="leading-[1.2]">{`Acelere suas vendas com `}</span>
                         <span className="bg-clip-text bg-gradient-to-r font-['Blinker',sans-serif] font-bold from-[#ff0150] leading-[1.2] not-italic text-[transparent] to-[#d30847] via-[#fa3471] via-[48.077%]">Live Shop</span>
@@ -154,7 +152,7 @@ export default function Home() {
                     </div>
                   </motion.div>
                 </div>
-                <p className="font-['Blinker',sans-serif] font-normal leading-[0] not-italic relative shrink-0 text-[24px] text-white w-full whitespace-pre-wrap" style={{ fontFeatureSettings: "'ss04' 1" }}>
+                <p className="font-['Blinker',sans-serif] font-normal leading-[0] not-italic relative shrink-0 text-[18px] sm:text-[24px] text-white w-full whitespace-pre-wrap" style={{ fontFeatureSettings: "'ss04' 1" }}>
                   <span className="font-['Blinker',sans-serif] font-bold leading-[normal]">Vendemos por você</span>
                   <span className="leading-[normal]">{` com `}</span>
                   <span className="font-['Blinker',sans-serif] font-bold leading-[normal]">LIVES</span>
@@ -182,7 +180,7 @@ export default function Home() {
                 </p>
               </motion.div>
             </div>
-            <motion.div className="h-full relative shrink-0 w-[622px]" variants={fadeRight} initial="hidden" animate="visible">
+            <motion.div className="hidden lg:block h-full relative shrink-0 w-[622px]" variants={fadeRight} initial="hidden" animate="visible">
               <div className="absolute flex h-[828.428px] items-center justify-center left-[-63px] top-[-40.88px] w-[828.429px]">
                 <div className="-rotate-45 flex-none">
                   <div className="h-[770.149px] relative w-[401.425px]">
@@ -295,8 +293,8 @@ export default function Home() {
           </div>
         </div>
       </div>
-      <motion.div className="bg-[#ebe610] content-stretch flex flex-col items-center justify-center px-[80px] py-[40px] relative shrink-0 w-full" variants={fadeUp} initial="hidden" whileInView="visible" viewport={{ once: true, amount: 0.3 }} custom={0}>
-        <div className="content-stretch flex gap-[40px] items-center justify-center max-w-[1280px] relative shrink-0 w-full">
+      <motion.div className="bg-[#ebe610] content-stretch flex flex-col items-center justify-center px-[16px] sm:px-[40px] lg:px-[80px] py-[40px] relative shrink-0 w-full" variants={fadeUp} initial="hidden" whileInView="visible" viewport={{ once: true, amount: 0.3 }} custom={0}>
+        <div className="content-stretch flex flex-col lg:flex-row gap-[24px] lg:gap-[40px] items-center justify-center max-w-[1280px] relative shrink-0 w-full">
           <p className="flex-[1_0_0] font-['Blinker',sans-serif] font-normal leading-[normal] min-w-px not-italic relative text-[#1c0109] text-[24px]">
             O Live Commerce está se consolidando no Brasil como uma poderosa estratégia de vendas.
           </p>
@@ -307,7 +305,7 @@ export default function Home() {
                 <p className="font-['Blinker',sans-serif] font-extrabold leading-[normal] text-[24px]">CONVERSÃO</p>
               </div>
             </div>
-            <div className="border-2 border-[#ff004f] border-solid content-stretch flex flex-col gap-[12px] items-center justify-center px-[24px] py-[16px] relative rounded-[16px] shrink-0 w-[250px]">
+            <div className="border-2 border-[#ff004f] border-solid content-stretch flex flex-col gap-[12px] items-center justify-center px-[24px] py-[16px] relative rounded-[16px] shrink-0 w-full sm:w-[250px]">
               <p className="font-['Blinker',sans-serif] font-extrabold leading-[normal] not-italic relative shrink-0 text-[#ff004f] text-[24px] whitespace-nowrap">
                 LIVE SHOP
               </p>
@@ -316,7 +314,7 @@ export default function Home() {
               </p>
               <div className="bg-gradient-to-r from-[#ff004f] h-[7px] rounded-[80px] shadow-[0px_0px_4px_0px_rgba(255,0,79,0.5)] shrink-0 to-[#d10645] via-[#f93774] via-[51.923%] w-full" />
             </div>
-            <div className="border-2 border-[#1c0109] border-solid content-stretch flex flex-col gap-[12px] items-center justify-center px-[24px] py-[16px] relative rounded-[16px] shrink-0 w-[250px]">
+            <div className="border-2 border-[#1c0109] border-solid content-stretch flex flex-col gap-[12px] items-center justify-center px-[24px] py-[16px] relative rounded-[16px] shrink-0 w-full sm:w-[250px]">
               <p className="font-['Blinker',sans-serif] font-semibold leading-[normal] not-italic relative shrink-0 text-[#1c0109] text-[24px] whitespace-nowrap">
                 VAREJO TRADICIONAL
               </p>
@@ -331,7 +329,7 @@ export default function Home() {
           </div>
         </div>
       </motion.div>
-      <div className="bg-[#1c0109] content-stretch flex flex-col items-center justify-center px-[200.5px] py-[96px] relative shrink-0 w-full">
+      <div className="bg-[#1c0109] content-stretch flex flex-col items-center justify-center px-[16px] sm:px-[40px] md:px-[80px] lg:px-[200.5px] py-[64px] lg:py-[96px] relative shrink-0 w-full">
         <div className="content-stretch flex flex-col gap-[40px] items-center justify-center max-w-[1280px] relative shrink-0 w-full">
           <div className="content-stretch flex gap-[24px] items-center justify-center relative shrink-0">
             <div className="relative shrink-0 size-[31px]">
@@ -344,17 +342,17 @@ export default function Home() {
             </div>
           </div>
           <motion.div className="content-center flex flex-wrap gap-[32px] items-center justify-center max-w-[1280px] relative shrink-0 w-full" variants={stagger} initial="hidden" whileInView="visible" viewport={{ once: true, amount: 0.2 }}>
-            <motion.div className="bg-[#3e1c1e] border border-[rgba(255,255,255,0.2)] border-solid content-stretch drop-shadow-[0px_0px_7.5px_rgba(248,65,120,0.3)] flex flex-col h-[211px] items-center justify-center p-[33px] relative rounded-[16px] shrink-0 w-[300px]" variants={cardVariant}>
+            <motion.div className="bg-[#3e1c1e] border border-[rgba(255,255,255,0.2)] border-solid content-stretch drop-shadow-[0px_0px_7.5px_rgba(248,65,120,0.3)] flex flex-col min-h-[211px] items-center justify-center p-[33px] relative rounded-[16px] shrink-0 w-full sm:w-[300px]" variants={cardVariant}>
               <div className="flex flex-col font-['Blinker',sans-serif] font-normal justify-center leading-[0] not-italic relative shrink-0 text-[24px] text-center text-white w-full">
                 <p className="leading-[1.2]">Quer vender mais, de forma escalável, sem precisar investir em mais equipe e estrutura</p>
               </div>
             </motion.div>
-            <motion.div className="bg-[#3e1c1e] border border-[rgba(255,255,255,0.2)] border-solid content-stretch drop-shadow-[0px_0px_7.5px_rgba(248,65,120,0.3)] flex flex-col h-[211px] items-center justify-center p-[33px] relative rounded-[16px] shrink-0 w-[300px]" variants={cardVariant}>
+            <motion.div className="bg-[#3e1c1e] border border-[rgba(255,255,255,0.2)] border-solid content-stretch drop-shadow-[0px_0px_7.5px_rgba(248,65,120,0.3)] flex flex-col min-h-[211px] items-center justify-center p-[33px] relative rounded-[16px] shrink-0 w-full sm:w-[300px]" variants={cardVariant}>
               <div className="flex flex-col font-['Blinker',sans-serif] font-normal justify-center leading-[0] not-italic relative shrink-0 text-[24px] text-center text-white w-full">
                 <p className="leading-[1.2]">Não faz ideia de onde e como começar a vender no formato mais promissor do e-commerce</p>
               </div>
             </motion.div>
-            <motion.div className="bg-[#3e1c1e] border border-[rgba(255,255,255,0.2)] border-solid content-stretch drop-shadow-[0px_0px_7.5px_rgba(248,65,120,0.3)] flex flex-col h-[211px] items-center justify-center p-[33px] relative rounded-[16px] shrink-0 w-[300px]" variants={cardVariant}>
+            <motion.div className="bg-[#3e1c1e] border border-[rgba(255,255,255,0.2)] border-solid content-stretch drop-shadow-[0px_0px_7.5px_rgba(248,65,120,0.3)] flex flex-col min-h-[211px] items-center justify-center p-[33px] relative rounded-[16px] shrink-0 w-full sm:w-[300px]" variants={cardVariant}>
               <div className="flex flex-col font-['Blinker',sans-serif] font-normal justify-center leading-[0] not-italic relative shrink-0 text-[24px] text-center text-white w-full">
                 <p className="leading-[1.2]">Quer crescer de forma segura, e procura um time que tem experiência no assunto.</p>
               </div>
@@ -362,12 +360,12 @@ export default function Home() {
           </motion.div>
         </div>
       </div>
-      <div className="content-stretch flex flex-col items-center justify-center p-[80px] relative shrink-0 w-full">
+      <div className="content-stretch flex flex-col items-center justify-center px-[16px] sm:px-[40px] lg:p-[80px] py-[64px] relative shrink-0 w-full">
         <div className="content-stretch flex flex-col gap-[64px] items-center max-w-[1280px] relative shrink-0 w-full">
           <div className="content-stretch flex flex-col items-center relative shrink-0 w-full">
             <div className="content-stretch flex flex-col gap-[24px] items-center justify-center leading-[0] not-italic relative shrink-0 text-center w-full">
               <div className="flex flex-col font-['Poppins',sans-serif] font-normal justify-center relative shrink-0 text-[#ff004f] text-[0px] tracking-[-1.6426px] w-full">
-                <p className="text-[56px]">
+                <p className="text-[32px] sm:text-[40px] lg:text-[56px]">
                   <span className="font-['Blinker',sans-serif] font-normal leading-[1.2]">{`Para `}</span>
                   <span className="font-['Blinker',sans-serif] font-bold leading-[1.2]">marcas que querem vender mais</span>
                 </p>
@@ -379,8 +377,8 @@ export default function Home() {
               </p>
             </div>
           </div>
-          <div className="content-stretch flex gap-[64px] items-center max-w-[1280px] relative shrink-0 w-[1280px]">
-            <motion.div className="content-stretch flex flex-col items-start relative shrink-0 w-[607.95px]" variants={fadeLeft} initial="hidden" whileInView="visible" viewport={{ once: true, amount: 0.3 }}>
+          <div className="content-stretch flex flex-col lg:flex-row gap-[48px] lg:gap-[64px] items-center max-w-[1280px] relative shrink-0 w-full">
+            <motion.div className="content-stretch flex flex-col items-start relative shrink-0 w-full lg:w-[607.95px]" variants={fadeLeft} initial="hidden" whileInView="visible" viewport={{ once: true, amount: 0.3 }}>
               <div className="content-stretch flex flex-col gap-[40px] items-start relative shrink-0 w-full">
                 <div className="content-stretch flex gap-[24px] items-start relative shrink-0 w-full">
                   <div className="bg-[#3e1c1e] content-stretch flex items-center justify-center relative rounded-[48px] shrink-0 size-[48px]">
@@ -395,7 +393,7 @@ export default function Home() {
                       </div>
                     </div>
                     <div className="content-stretch flex flex-col items-start relative shrink-0 w-full">
-                      <div className="flex flex-col font-['Blinker',sans-serif] font-normal h-[48px] justify-center leading-[0] not-italic relative shrink-0 text-[20px] text-white w-[472.19px]">
+                      <div className="flex flex-col font-['Blinker',sans-serif] font-normal justify-center leading-[0] not-italic relative shrink-0 text-[20px] text-white w-full">
                         <p className="leading-[1.3]">Utilizamos o algoritmo a seu favor para alcançar milhares de potenciais clientes de forma orgânica.</p>
                       </div>
                     </div>
@@ -414,7 +412,7 @@ export default function Home() {
                       </div>
                     </div>
                     <div className="content-stretch flex flex-col items-start relative shrink-0 w-full">
-                      <div className="flex flex-col font-['Blinker',sans-serif] font-normal h-[48px] justify-center leading-[0] not-italic relative shrink-0 text-[20px] text-white w-[471.09px]">
+                      <div className="flex flex-col font-['Blinker',sans-serif] font-normal justify-center leading-[0] not-italic relative shrink-0 text-[20px] text-white w-full">
                         <p className="leading-[1.3] whitespace-pre-wrap">{`Equipamentos de vídeo, áudio e cenários  que aumentam o valor percebido da sua marca.`}</p>
                       </div>
                     </div>
@@ -433,7 +431,7 @@ export default function Home() {
                       </div>
                     </div>
                     <div className="content-stretch flex flex-col items-start relative shrink-0 w-full">
-                      <div className="flex flex-col font-['Blinker',sans-serif] font-normal h-[48px] justify-center leading-[0] not-italic relative shrink-0 text-[20px] text-white w-[512.11px]">
+                      <div className="flex flex-col font-['Blinker',sans-serif] font-normal justify-center leading-[0] not-italic relative shrink-0 text-[20px] text-white w-full">
                         <p className="leading-[1.3]">Gatilhos mentais, roteiros validados e análise de dados em tempo real para maximizar seus resultados.</p>
                       </div>
                     </div>
@@ -462,30 +460,17 @@ export default function Home() {
           </motion.div>
         </div>
       </div>
-      <div className="bg-[#1c0109] content-stretch flex flex-col items-center justify-center p-[80px] relative shrink-0 w-full">
-        <div className="content-stretch flex gap-[80px] items-center justify-center max-w-[1280px] relative shrink-0 w-full">
-          <div className="content-stretch flex flex-col items-start justify-center relative shrink-0">
+      <div className="bg-[#1c0109] content-stretch flex flex-col items-center justify-center px-[16px] sm:px-[40px] lg:p-[80px] py-[64px] relative shrink-0 w-full">
+        <div className="content-stretch flex flex-col lg:flex-row gap-[48px] lg:gap-[80px] items-center justify-center max-w-[1280px] relative shrink-0 w-full">
+          <div className="content-stretch flex flex-col items-center lg:items-start justify-center relative shrink-0">
             <div className="content-stretch flex flex-col gap-[24px] items-center justify-center leading-[0] not-italic relative shrink-0 w-full">
               <div className="flex flex-col font-['Blinker',sans-serif] font-bold justify-center relative shrink-0 text-[40px] text-white whitespace-nowrap">
                 <p className="leading-[1.2]">Por que escolher a</p>
               </div>
-              <div className="grid-cols-[max-content] grid-rows-[max-content] inline-grid place-items-start relative shrink-0">
-                <p className="col-1 font-['Shuriken_Boy_Std',sans-serif] leading-[normal] ml-[203.91px] mt-0 relative row-1 text-[#ff004f] text-[47.852px] whitespace-nowrap">
-                  .
-                </p>
-                <p className="col-1 font-['Shuriken_Boy_Std',sans-serif] leading-[normal] ml-0 mt-0 relative row-1 text-[#ff004f] text-[47.852px] whitespace-nowrap">
-                  live
-                </p>
-                <p className="col-1 font-['Shuriken_Boy_Std',sans-serif] leading-[normal] ml-[100.5px] mt-0 relative row-1 text-[#ebe610] text-[47.852px] whitespace-nowrap">
-                  hub
-                </p>
-                <p className="col-1 font-['BC_Barell',sans-serif] leading-[normal] ml-[2.89px] mt-[45.66px] relative row-1 text-[17.564px] text-white tracking-[1.4051px] w-[217.114px]">
-                  estúdio e performance
-                </p>
-              </div>
+              <Logo />
             </div>
           </div>
-          <div className="content-stretch flex flex-col items-start relative shrink-0 w-[607.95px]">
+          <div className="content-stretch flex flex-col items-start relative shrink-0 w-full lg:w-[607.95px]">
             <div className="content-stretch flex flex-col gap-[40px] items-start relative shrink-0 w-full">
               <div className="content-stretch flex gap-[24px] items-start relative shrink-0 w-full">
                 <div className="bg-[#3e1c1e] content-stretch flex items-center justify-center relative rounded-[48px] shrink-0 size-[48px]">
@@ -500,7 +485,7 @@ export default function Home() {
                     </div>
                   </div>
                   <div className="content-stretch flex flex-col items-start relative shrink-0 w-full">
-                    <div className="flex flex-col font-['Blinker',sans-serif] font-normal justify-center leading-[0] not-italic relative shrink-0 text-[20px] text-white w-[471.09px]">
+                    <div className="flex flex-col font-['Blinker',sans-serif] font-normal justify-center leading-[0] not-italic relative shrink-0 text-[20px] text-white w-full">
                       <p className="leading-[1.3]">A Live Hub faz parte de um grupo empresarial que possui e-commerces, empresas de consultoria e marketing. Nós aplicamos de verdade o que estamos te oferecendo.</p>
                     </div>
                   </div>
@@ -519,7 +504,7 @@ export default function Home() {
                     </div>
                   </div>
                   <div className="content-stretch flex flex-col items-start relative shrink-0 w-full">
-                    <div className="flex flex-col font-['Blinker',sans-serif] font-normal justify-center leading-[0] not-italic relative shrink-0 text-[20px] text-white w-[471.09px]">
+                    <div className="flex flex-col font-['Blinker',sans-serif] font-normal justify-center leading-[0] not-italic relative shrink-0 text-[20px] text-white w-full">
                       <p className="leading-[1.3]">Cada projeto é customizado. Nosso time irá entender o cenário do seu negócio e vamos montar um plano estratégico para uma parceria de sucesso.</p>
                     </div>
                   </div>
@@ -538,7 +523,7 @@ export default function Home() {
                     </div>
                   </div>
                   <div className="content-stretch flex flex-col items-start relative shrink-0 w-full">
-                    <div className="flex flex-col font-['Blinker',sans-serif] font-normal justify-center leading-[0] not-italic relative shrink-0 text-[20px] text-white w-[512.11px]">
+                    <div className="flex flex-col font-['Blinker',sans-serif] font-normal justify-center leading-[0] not-italic relative shrink-0 text-[20px] text-white w-full">
                       <p className="leading-[1.3]">Nossos Apresentadores (Live Sellers) e Operadores de Live, recebem treinamento completo de vendas com profissionais experientes, que já faturaram milhões de reais com Lives no Brasil.</p>
                     </div>
                   </div>
@@ -548,7 +533,7 @@ export default function Home() {
           </div>
         </div>
       </div>
-      <div className="content-stretch flex flex-col items-center justify-center p-[80px] relative shrink-0 w-full">
+      <div className="content-stretch flex flex-col items-center justify-center px-[16px] sm:px-[40px] lg:p-[80px] py-[64px] relative shrink-0 w-full">
         <div className="content-stretch flex flex-col gap-[40px] items-center justify-center max-w-[1280px] relative shrink-0 w-full">
           <motion.div className="content-stretch flex flex-col gap-[10px] items-start leading-[0] not-italic relative shrink-0 text-center w-full" variants={fadeUp} initial="hidden" whileInView="visible" viewport={{ once: true, amount: 0.5 }} custom={0}>
             <div className="flex flex-col font-['Blinker',sans-serif] font-bold justify-center relative shrink-0 text-[40px] text-white w-full">
@@ -571,39 +556,39 @@ export default function Home() {
               </p>
             </div>
           </motion.div>
-          <div className="content-start flex flex-wrap gap-[10px] items-start relative shrink-0 w-[1280px]">
-            <div className="h-[174px] relative shadow-[0px_4px_4px_0px_rgba(0,0,0,0.25)] shrink-0 w-[408px]">
+          <div className="content-start flex flex-wrap gap-[10px] items-start relative shrink-0 w-full">
+            <div className="h-[140px] sm:h-[174px] relative shadow-[0px_4px_4px_0px_rgba(0,0,0,0.25)] shrink-0 flex-1 min-w-[240px]">
               <img alt="" className="absolute inset-0 max-w-none object-cover pointer-events-none size-full" src={imgImage} />
             </div>
-            <div className="h-[173px] relative shadow-[0px_4px_4px_0px_rgba(0,0,0,0.25)] shrink-0 w-[408px]">
+            <div className="h-[140px] sm:h-[173px] relative shadow-[0px_4px_4px_0px_rgba(0,0,0,0.25)] shrink-0 flex-1 min-w-[240px]">
               <img alt="" className="absolute inset-0 max-w-none object-cover pointer-events-none size-full" src={imgImage1} />
             </div>
-            <div className="h-[136.794px] relative shadow-[0px_4px_4px_0px_rgba(0,0,0,0.25)] shrink-0 w-[441px]">
+            <div className="h-[120px] sm:h-[136px] relative shadow-[0px_4px_4px_0px_rgba(0,0,0,0.25)] shrink-0 flex-1 min-w-[240px]">
               <img alt="" className="absolute inset-0 max-w-none object-cover pointer-events-none size-full" src={imgImage2} />
             </div>
-            <div className="h-[174px] relative shadow-[0px_4px_4px_0px_rgba(0,0,0,0.25)] shrink-0 w-[609px]">
+            <div className="h-[140px] sm:h-[174px] relative shadow-[0px_4px_4px_0px_rgba(0,0,0,0.25)] shrink-0 flex-1 min-w-[280px]">
               <img alt="" className="absolute inset-0 max-w-none object-cover pointer-events-none size-full" src={imgImage3} />
             </div>
-            <div className="h-[129px] relative shadow-[0px_4px_4px_0px_rgba(0,0,0,0.25)] shrink-0 w-[658px]">
+            <div className="h-[120px] sm:h-[129px] relative shadow-[0px_4px_4px_0px_rgba(0,0,0,0.25)] shrink-0 flex-1 min-w-[280px]">
               <img alt="" className="absolute inset-0 max-w-none object-cover pointer-events-none size-full" src={imgImage4} />
             </div>
           </div>
-          <div className="border border-[#ff004f] border-solid content-stretch flex items-center justify-center px-[40px] py-[24px] relative rounded-[120px] shrink-0 w-[893px]">
-            <div className="flex flex-col font-['Blinker',sans-serif] font-semibold justify-center leading-[0] not-italic relative shrink-0 text-[24px] text-center text-white w-[685px]">
+          <div className="border border-[#ff004f] border-solid content-stretch flex items-center justify-center px-[24px] sm:px-[40px] py-[24px] relative rounded-[120px] shrink-0 w-full max-w-[893px]">
+            <div className="flex flex-col font-['Blinker',sans-serif] font-semibold justify-center leading-[0] not-italic relative shrink-0 text-[20px] sm:text-[24px] text-center text-white w-full">
               <p className="leading-[1.3]">Empresas que apostarem nesse canal de vendas irão surfar a maior onda do e-commece brasileiro nos próximos anos.</p>
             </div>
           </div>
         </div>
       </div>
-      <div className="bg-[#ff004f] content-stretch flex flex-col items-center justify-center p-[80px] relative shrink-0 w-full">
+      <div className="bg-[#ff004f] content-stretch flex flex-col items-center justify-center px-[16px] sm:px-[40px] lg:p-[80px] py-[64px] relative shrink-0 w-full">
         <div className="content-stretch flex flex-col gap-[72px] items-center max-w-[1280px] relative shrink-0 w-full">
           <div className="content-stretch flex flex-col items-center max-w-[1280px] relative shrink-0 w-full">
             <div className="flex flex-col font-['Blinker',sans-serif] font-bold justify-center leading-[0] not-italic relative shrink-0 text-[40px] text-white whitespace-nowrap">
               <p className="leading-[1.2]">Como funciona na prática</p>
             </div>
           </div>
-          <motion.div className="content-stretch flex gap-[80px] items-center justify-center relative shrink-0 w-full" variants={stagger} initial="hidden" whileInView="visible" viewport={{ once: true, amount: 0.3 }}>
-            <div className="absolute border-[#ebe610] border-dashed border-t-2 h-[2px] left-[14.84%] right-[14.38%] top-[48px]" />
+          <motion.div className="content-stretch flex flex-col sm:flex-row gap-[48px] sm:gap-[40px] lg:gap-[80px] items-center justify-center relative shrink-0 w-full" variants={stagger} initial="hidden" whileInView="visible" viewport={{ once: true, amount: 0.3 }}>
+            <div className="hidden sm:block absolute border-[#ebe610] border-dashed border-t-2 h-[2px] left-[14.84%] right-[14.38%] top-[48px]" />
             <motion.div className="content-stretch flex flex-[1_0_0] flex-col gap-[24px] items-center min-w-px relative" variants={cardVariant}>
               <div className="bg-[#1c0109] content-stretch drop-shadow-[0px_0px_15px_rgba(255,0,60,0.2)] flex items-center justify-center relative rounded-[9999px] shrink-0 size-[96px]">
                 <div className="h-[30px] relative shrink-0 w-[27px]">
@@ -690,24 +675,11 @@ export default function Home() {
           </div>
         </div>
       </div>
-      <div className="bg-[#030001] content-stretch flex flex-col items-center justify-center py-[96px] relative shrink-0 w-full">
+      <div className="bg-[#030001] content-stretch flex flex-col items-center justify-center px-[16px] sm:px-[40px] lg:px-0 py-[64px] lg:py-[96px] relative shrink-0 w-full">
         <div className="content-stretch flex flex-col gap-[40px] items-start max-w-[1280px] relative shrink-0 w-full">
-          <div className="grid-cols-[max-content] grid-rows-[max-content] inline-grid leading-[0] not-italic place-items-start relative shrink-0">
-            <p className="col-1 font-['Shuriken_Boy_Std',sans-serif] leading-[normal] ml-[203.91px] mt-0 relative row-1 text-[#ff004f] text-[47.852px] whitespace-nowrap">
-              .
-            </p>
-            <p className="col-1 font-['Shuriken_Boy_Std',sans-serif] leading-[normal] ml-0 mt-0 relative row-1 text-[#ff004f] text-[47.852px] whitespace-nowrap">
-              live
-            </p>
-            <p className="col-1 font-['Shuriken_Boy_Std',sans-serif] leading-[normal] ml-[100.5px] mt-0 relative row-1 text-[#ebe610] text-[47.852px] whitespace-nowrap">
-              hub
-            </p>
-            <p className="col-1 font-['BC_Barell',sans-serif] leading-[normal] ml-[2.89px] mt-[45.66px] relative row-1 text-[17.564px] text-white tracking-[1.4051px] w-[217.114px]">
-              estúdio e performance
-            </p>
-          </div>
-          <motion.div className="gap-x-[32px] gap-y-[32px] grid grid-cols-[repeat(3,minmax(0,1fr))] grid-rows-[__178px_178px] max-w-[1280px] relative shrink-0 w-full" variants={stagger} initial="hidden" whileInView="visible" viewport={{ once: true, amount: 0.15 }}>
-            <motion.div className="bg-[#1c0109] border border-[#ff004f] border-solid col-1 content-stretch drop-shadow-[0px_0px_7.5px_rgba(248,65,120,0.3)] flex flex-col gap-[8px] items-start justify-self-stretch p-[33px] relative rounded-[16px] row-1 self-start shrink-0" variants={cardVariant}>
+          <Logo />
+          <motion.div className="gap-x-[32px] gap-y-[32px] grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 max-w-[1280px] relative shrink-0 w-full" variants={stagger} initial="hidden" whileInView="visible" viewport={{ once: true, amount: 0.15 }}>
+            <motion.div className="bg-[#1c0109] border border-[#ff004f] border-solid content-stretch drop-shadow-[0px_0px_7.5px_rgba(248,65,120,0.3)] flex flex-col gap-[8px] items-start p-[33px] relative rounded-[16px] shrink-0" variants={cardVariant}>
               <div className="h-[19.8px] relative shrink-0 w-[22px]">
                 <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgIcon} />
               </div>
@@ -726,7 +698,7 @@ export default function Home() {
                 </div>
               </div>
             </motion.div>
-            <motion.div className="bg-[#1c0109] border border-[#ff004f] border-solid col-2 content-stretch drop-shadow-[0px_0px_7.5px_rgba(248,65,120,0.3)] flex flex-col gap-[8px] items-start justify-self-stretch p-[33px] relative rounded-[16px] row-1 self-start shrink-0" variants={cardVariant}>
+            <motion.div className="bg-[#1c0109] border border-[#ff004f] border-solid content-stretch drop-shadow-[0px_0px_7.5px_rgba(248,65,120,0.3)] flex flex-col gap-[8px] items-start p-[33px] relative rounded-[16px] shrink-0" variants={cardVariant}>
               <div className="h-[18px] relative shrink-0 w-[16px]">
                 <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgIcon1} />
               </div>
@@ -745,7 +717,7 @@ export default function Home() {
                 </div>
               </div>
             </motion.div>
-            <motion.div className="bg-[#1c0109] border border-[#ff004f] border-solid col-3 content-stretch drop-shadow-[0px_0px_7.5px_rgba(248,65,120,0.3)] flex flex-col gap-[8px] items-start justify-self-stretch p-[33px] relative rounded-[16px] row-1 self-start shrink-0" variants={cardVariant}>
+            <motion.div className="bg-[#1c0109] border border-[#ff004f] border-solid content-stretch drop-shadow-[0px_0px_7.5px_rgba(248,65,120,0.3)] flex flex-col gap-[8px] items-start p-[33px] relative rounded-[16px] shrink-0" variants={cardVariant}>
               <div className="h-[20.071px] relative shrink-0 w-[20.047px]">
                 <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgIcon2} />
               </div>
@@ -765,7 +737,7 @@ export default function Home() {
                 </div>
               </div>
             </motion.div>
-            <motion.div className="bg-[#1c0109] border border-[#ff004f] border-solid col-1 content-stretch drop-shadow-[0px_0px_7.5px_rgba(248,65,120,0.3)] flex flex-col gap-[8px] items-start justify-self-stretch p-[33px] relative rounded-[16px] row-2 self-start shrink-0" variants={cardVariant}>
+            <motion.div className="bg-[#1c0109] border border-[#ff004f] border-solid content-stretch drop-shadow-[0px_0px_7.5px_rgba(248,65,120,0.3)] flex flex-col gap-[8px] items-start p-[33px] relative rounded-[16px] shrink-0" variants={cardVariant}>
               <div className="h-[12px] relative shrink-0 w-[24px]">
                 <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgIcon3} />
               </div>
@@ -784,7 +756,7 @@ export default function Home() {
                 </div>
               </div>
             </motion.div>
-            <motion.div className="bg-[#1c0109] border border-[#ff004f] border-solid col-2 content-stretch drop-shadow-[0px_0px_7.5px_rgba(248,65,120,0.3)] flex flex-col gap-[8px] items-start justify-self-stretch p-[33px] relative rounded-[16px] row-2 self-start shrink-0" variants={cardVariant}>
+            <motion.div className="bg-[#1c0109] border border-[#ff004f] border-solid content-stretch drop-shadow-[0px_0px_7.5px_rgba(248,65,120,0.3)] flex flex-col gap-[8px] items-start p-[33px] relative rounded-[16px] shrink-0" variants={cardVariant}>
               <div className="h-[16px] relative shrink-0 w-[20.002px]">
                 <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgIcon4} />
               </div>
@@ -804,7 +776,7 @@ export default function Home() {
                 </div>
               </div>
             </motion.div>
-            <motion.div className="bg-[#1c0109] border border-[#ff004f] border-solid col-3 content-stretch drop-shadow-[0px_0px_7.5px_rgba(248,65,120,0.3)] flex flex-col gap-[8px] items-start justify-self-stretch p-[33px] relative rounded-[16px] row-2 self-start shrink-0" variants={cardVariant}>
+            <motion.div className="bg-[#1c0109] border border-[#ff004f] border-solid content-stretch drop-shadow-[0px_0px_7.5px_rgba(248,65,120,0.3)] flex flex-col gap-[8px] items-start p-[33px] relative rounded-[16px] shrink-0" variants={cardVariant}>
               <div className="h-[20px] relative shrink-0 w-[16px]">
                 <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgIcon5} />
               </div>
@@ -826,15 +798,15 @@ export default function Home() {
           </motion.div>
         </div>
       </div>
-      <div className="bg-[#1c0109] content-stretch flex flex-col items-center justify-center py-[96px] relative shrink-0 w-full">
+      <div className="bg-[#1c0109] content-stretch flex flex-col items-center justify-center px-[16px] sm:px-[40px] py-[64px] lg:py-[96px] relative shrink-0 w-full">
         <div className="content-stretch flex flex-col gap-[40px] items-center justify-center max-w-[1280px] relative shrink-0 w-full">
           <div className="content-stretch flex items-center justify-center relative shrink-0">
             <div className="flex flex-col font-['Blinker',sans-serif] font-bold justify-center leading-[0] not-italic relative shrink-0 text-[40px] text-white whitespace-nowrap">
               <p className="leading-[1.2]">Ainda tem dúvida?</p>
             </div>
           </div>
-          <div className="content-center flex flex-wrap gap-[32px] items-center justify-center max-w-[1280px] relative shrink-0 w-full">
-            <div className="bg-[#3e1c1e] border-2 border-[#ff004f] border-solid content-stretch drop-shadow-[0px_0px_7.5px_rgba(248,65,120,0.3)] flex flex-col gap-[8px] items-center justify-center p-[34px] relative rounded-[16px] shrink-0 w-[300px]">
+          <div className="content-center flex flex-col sm:flex-row flex-wrap gap-[32px] items-center justify-center max-w-[1280px] relative shrink-0 w-full">
+            <div className="bg-[#3e1c1e] border-2 border-[#ff004f] border-solid content-stretch drop-shadow-[0px_0px_7.5px_rgba(248,65,120,0.3)] flex flex-col gap-[8px] items-center justify-center p-[34px] relative rounded-[16px] shrink-0 w-full sm:w-[300px]">
               <div className="relative shrink-0 size-[31px]">
                 <div className="absolute inset-[-16.13%]">
                   <img alt="" className="block max-w-none size-full" src={imgBenefitIconContainer} />
@@ -847,7 +819,7 @@ export default function Home() {
                 <p className="leading-[1.2]">COM 5H DE DURAÇÃO</p>
               </div>
             </div>
-            <div className="content-stretch flex flex-col font-['Blinker',sans-serif] font-normal gap-[24px] items-start leading-[0] not-italic relative shrink-0 text-[20px] text-white w-[512.11px]">
+            <div className="content-stretch flex flex-col font-['Blinker',sans-serif] font-normal gap-[24px] items-start leading-[0] not-italic relative shrink-0 text-[20px] text-white w-full sm:flex-[1_0_0]">
               <div className="flex flex-col justify-center relative shrink-0 w-full">
                 <p className="leading-[1.3]">{`Nós realizamos 5 HORAS DE LIVE dos seus produtos para te mostrar os resultados que conseguimos chegar por você. `}</p>
               </div>
@@ -871,7 +843,7 @@ export default function Home() {
           </div>
         </div>
       </div>
-      <div className="bg-[#030001] content-stretch flex flex-col items-center justify-center px-[392.5px] py-[96px] relative shrink-0 w-full">
+      <div className="bg-[#030001] content-stretch flex flex-col items-center justify-center px-[16px] sm:px-[40px] md:px-[80px] lg:px-[160px] xl:px-[392.5px] py-[64px] lg:py-[96px] relative shrink-0 w-full">
         <div className="content-stretch flex flex-col gap-[64px] items-start max-w-[896px] relative shrink-0 w-full">
           <div className="content-stretch flex flex-col items-center relative shrink-0 w-full">
             <div className="flex flex-col font-['Blinker',sans-serif] font-bold justify-center leading-[0] not-italic relative shrink-0 text-[40px] text-white whitespace-nowrap">
@@ -978,24 +950,11 @@ export default function Home() {
           </motion.div>
         </div>
       </div>
-      <div className="bg-[#ff004f] content-stretch flex flex-col items-center justify-center px-[200.5px] py-[96px] relative shrink-0 w-full">
-        <div className="content-stretch flex flex-col gap-[56px] items-start px-[5px] relative shrink-0">
-          <div className="content-stretch flex gap-[56px] items-center justify-center relative shrink-0 w-full">
-            <div className="content-stretch flex flex-col items-start relative shrink-0 w-[220.001px]">
-              <div className="grid-cols-[max-content] grid-rows-[max-content] inline-grid leading-[0] not-italic place-items-start relative shrink-0">
-                <p className="col-1 font-['Shuriken_Boy_Std',sans-serif] leading-[normal] ml-[203.91px] mt-0 relative row-1 text-[47.852px] text-white whitespace-nowrap">
-                  .
-                </p>
-                <p className="col-1 font-['Shuriken_Boy_Std',sans-serif] leading-[normal] ml-0 mt-0 relative row-1 text-[47.852px] text-white whitespace-nowrap">
-                  live
-                </p>
-                <p className="col-1 font-['Shuriken_Boy_Std',sans-serif] leading-[normal] ml-[100.5px] mt-0 relative row-1 text-[#ebe610] text-[47.852px] whitespace-nowrap">
-                  hub
-                </p>
-                <p className="col-1 font-['BC_Barell',sans-serif] leading-[normal] ml-[2.89px] mt-[45.66px] relative row-1 text-[17.564px] text-white tracking-[1.4051px] w-[217.114px]">
-                  estúdio e performance
-                </p>
-              </div>
+      <div className="bg-[#ff004f] content-stretch flex flex-col items-center justify-center px-[16px] sm:px-[40px] lg:px-[80px] xl:px-[200.5px] py-[64px] lg:py-[96px] relative shrink-0 w-full">
+        <div className="content-stretch flex flex-col gap-[56px] items-start w-full max-w-[1280px] relative">
+          <div className="content-stretch flex flex-col sm:flex-row gap-[32px] sm:gap-[56px] items-center justify-between relative w-full">
+            <div className="content-stretch flex flex-col items-start relative shrink-0">
+              <Logo textClass="text-white" />
             </div>
             <div className="content-stretch flex flex-[1_0_0] items-center justify-end min-w-px overflow-clip p-[7.113px] relative">
               <div className="content-stretch flex gap-[16px] items-center justify-center relative rounded-[56.906px] shrink-0">
@@ -1038,12 +997,12 @@ export default function Home() {
               </div>
             </div>
           </div>
-          <div className="h-0 relative shrink-0 w-[1101px]">
+          <div className="h-0 relative shrink-0 w-full">
             <div className="absolute inset-[-1px_0_0_0]">
               <img alt="" className="block max-w-none size-full" src={imgLine1} />
             </div>
           </div>
-          <div className="content-stretch flex gap-[32px] items-center max-w-[1280px] relative shrink-0 w-[1111px]">
+          <div className="content-stretch flex flex-col sm:flex-row gap-[16px] sm:gap-[32px] items-start sm:items-center relative shrink-0 w-full">
             <div className="content-stretch flex flex-[1_0_0] flex-col font-['Blinker',sans-serif] font-semibold gap-[8px] items-start justify-center leading-[0] min-w-px not-italic relative text-[14px] text-white">
               <div className="flex flex-col justify-center relative shrink-0 w-full">
                 <p className="leading-[20px]">© 2026 Live Hub</p>
