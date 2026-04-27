@@ -92,47 +92,43 @@ function Logo({ textClass = "text-[#ff004f]" }: { textClass?: string }) {
   );
 }
 
+const waLink = "https://wa.me/5511997957457?text=Ol%C3%A1!%20Tenho%20interesse%20em%20saber%20mais%20sobre%20Live%20Shop.";
+
 export default function Home() {
   return (
     <div className="bg-[#030001] content-stretch flex flex-col items-start relative w-full">
-      <div className="content-stretch flex flex-col items-center justify-center relative shrink-0 w-full" style={{ backgroundImage: "linear-gradient(90deg, rgba(0, 0, 0, 0.2) 0%, rgba(0, 0, 0, 0.2) 100%), linear-gradient(42.686932291193614deg, rgba(19, 1, 6, 0.5) 34.248%, rgba(49, 24, 31, 0.5) 89.917%)" }}>
+      <div id="hero" className="flex flex-col min-h-screen relative w-full" style={{ backgroundImage: "linear-gradient(90deg, rgba(0, 0, 0, 0.2) 0%, rgba(0, 0, 0, 0.2) 100%), linear-gradient(42.686932291193614deg, rgba(19, 1, 6, 0.5) 34.248%, rgba(49, 24, 31, 0.5) 89.917%)" }}>
         <div className="content-stretch flex flex-col min-h-[80px] lg:h-[120px] items-center justify-center px-[16px] sm:px-[24px] lg:px-[40px] relative shrink-0 w-full">
           <div className="content-stretch flex flex-[1_0_0] gap-[10px] items-center max-w-[1600px] min-h-px py-[24px] relative w-full">
             <Logo />
             <div className="content-stretch flex flex-[1_0_0] items-center justify-end min-w-px overflow-clip p-[7.113px] relative">
               <div className="content-stretch flex gap-[7.113px] items-center justify-center relative rounded-[56.906px] shrink-0">
                 <div className="hidden lg:flex font-['Blinker',sans-serif] font-semibold gap-[32px] xl:gap-[56.906px] items-center justify-center leading-[normal] not-italic px-[20px] xl:px-[40px] py-[16px] relative rounded-[40px] shrink-0 text-[16px] text-white uppercase whitespace-nowrap">
-                  <p className="relative shrink-0">
-                    start
-                  </p>
-                  <p className="relative shrink-0">
-                    para marcas
-                  </p>
-                  <p className="relative shrink-0">
-                    PORQUE NÓS
-                  </p>
-                  <p className="relative shrink-0">
-                    como funciona
-                  </p>
-                  <p className="relative shrink-0">
-                    blog
-                  </p>
+                  <a href="#hero" className="relative shrink-0 hover:text-[#ebe610] transition-colors">start</a>
+                  <a href="#para-marcas" className="relative shrink-0 hover:text-[#ebe610] transition-colors">para marcas</a>
+                  <a href="#porque-nos" className="relative shrink-0 hover:text-[#ebe610] transition-colors">PORQUE NÓS</a>
+                  <a href="#como-funciona" className="relative shrink-0 hover:text-[#ebe610] transition-colors">como funciona</a>
+                  <a href="#faq" className="relative shrink-0 hover:text-[#ebe610] transition-colors">blog</a>
                 </div>
-                <div className="bg-[#ebe610] content-stretch flex items-center justify-center px-[24px] py-[16px] relative rounded-[40px] shrink-0">
-                  <div className="content-stretch flex gap-[8px] items-center relative shrink-0">
-                    <p className="font-['Blinker',sans-serif] font-semibold leading-[normal] not-italic relative shrink-0 text-[#130106] text-[16px] uppercase whitespace-nowrap">
-                      contato
-                    </p>
-                    <div className="h-[19.498px] relative shrink-0 w-[19.5px]">
-                      <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgVector1} />
-                    </div>
+                <a href={waLink} target="_blank" rel="noopener noreferrer">
+                  <div className="cta-border p-[2px] rounded-[40px]">
+                    <motion.div className="bg-[#ebe610] content-stretch flex items-center justify-center px-[24px] py-[16px] relative rounded-[38px] shrink-0 cursor-pointer" whileHover={{ scale: 1.04 }} whileTap={{ scale: 0.97 }}>
+                      <div className="content-stretch flex gap-[8px] items-center relative shrink-0">
+                        <p className="font-['Blinker',sans-serif] font-semibold leading-[normal] not-italic relative shrink-0 text-[#130106] text-[16px] uppercase whitespace-nowrap">
+                          contato
+                        </p>
+                        <div className="h-[19.498px] relative shrink-0 w-[19.5px]">
+                          <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgVector1} />
+                        </div>
+                      </div>
+                    </motion.div>
                   </div>
-                </div>
+                </a>
               </div>
             </div>
           </div>
         </div>
-        <div className="content-stretch flex min-h-[600px] lg:h-[776px] items-center justify-center px-[16px] sm:px-[24px] lg:px-[40px] py-[60px] lg:py-0 relative shrink-0 w-full">
+        <div className="flex flex-1 items-center justify-center px-[16px] sm:px-[24px] lg:px-[40px] py-[60px] relative w-full">
           <div className="content-stretch flex flex-col lg:flex-row flex-[1_0_0] gap-[48px] lg:gap-[100px] items-center lg:items-start max-w-[1280px] min-w-px relative w-full">
             <div className="content-stretch flex w-full lg:flex-[1_0_0] flex-col gap-[48px] lg:gap-[80px] items-start justify-center max-w-[1280px] min-w-px relative">
               <div className="content-stretch flex flex-col gap-[40px] items-start relative shrink-0 w-full">
@@ -162,19 +158,23 @@ export default function Home() {
                 </p>
               </div>
               <motion.div className="content-stretch flex flex-col gap-[10px] items-start relative shrink-0 w-full" variants={fadeUp} initial="hidden" animate="visible" custom={0.3}>
-                <motion.div className="border border-[rgba(255,255,255,0.5)] border-solid content-stretch drop-shadow-[0px_0px_14px_rgba(255,0,79,0.5)] flex gap-[8px] h-[56px] isolate items-center justify-center px-[56px] py-[8px] relative rounded-[80px] shrink-0 cursor-pointer" style={{ backgroundImage: "linear-gradient(52.42604106027996deg, rgb(255, 0, 79) 5.2313%, rgb(255, 82, 136) 50.249%, rgb(255, 0, 79) 102.77%)" }} whileHover={{ scale: 1.04 }} whileTap={{ scale: 0.97 }}>
-                  <p className="font-['Blinker',sans-serif] font-semibold leading-[normal] not-italic relative shrink-0 text-[16px] text-white uppercase whitespace-nowrap z-[2]" style={{ fontFeatureSettings: "'ss04' 1, 'cv03' 1" }}>
-                    QUERO ACELERAR MINHAS VENDAS
-                  </p>
-                  <div className="content-stretch flex items-center relative rounded-[40px] shrink-0 z-[1]">
-                    <div className="overflow-clip relative shrink-0 size-[24px]">
-                      <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgButtonIcon} />
-                      <div className="absolute inset-[9.39%_9.37%_9.37%_9.38%]">
-                        <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgVector2} />
+                <a href={waLink} target="_blank" rel="noopener noreferrer" className="shrink-0">
+                  <div className="cta-border p-[2px] rounded-[80px]">
+                    <motion.div className="drop-shadow-[0px_0px_14px_rgba(255,0,79,0.5)] flex gap-[8px] h-[56px] isolate items-center justify-center px-[56px] py-[8px] relative rounded-[78px] cursor-pointer" style={{ backgroundImage: "linear-gradient(52.42604106027996deg, rgb(255, 0, 79) 5.2313%, rgb(255, 82, 136) 50.249%, rgb(255, 0, 79) 102.77%)" }} whileHover={{ scale: 1.04 }} whileTap={{ scale: 0.97 }}>
+                      <p className="font-['Blinker',sans-serif] font-semibold leading-[normal] not-italic relative shrink-0 text-[16px] text-white uppercase whitespace-nowrap z-[2]" style={{ fontFeatureSettings: "'ss04' 1, 'cv03' 1" }}>
+                        QUERO ACELERAR MINHAS VENDAS
+                      </p>
+                      <div className="content-stretch flex items-center relative rounded-[40px] shrink-0 z-[1]">
+                        <div className="overflow-clip relative shrink-0 size-[24px]">
+                          <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgButtonIcon} />
+                          <div className="absolute inset-[9.39%_9.37%_9.37%_9.38%]">
+                            <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgVector2} />
+                          </div>
+                        </div>
                       </div>
-                    </div>
+                    </motion.div>
                   </div>
-                </motion.div>
+                </a>
                 <p className="font-['Blinker',sans-serif] font-normal leading-[normal] min-w-full not-italic relative shrink-0 text-[16px] text-white w-[min-content]" style={{ fontFeatureSettings: "'ss04' 1" }}>
                   Converse sem compromisso com um especialista da Live Hub.
                 </p>
@@ -360,7 +360,7 @@ export default function Home() {
           </motion.div>
         </div>
       </div>
-      <div className="content-stretch flex flex-col items-center justify-center px-[16px] sm:px-[40px] lg:p-[80px] py-[64px] relative shrink-0 w-full">
+      <div id="para-marcas" className="content-stretch flex flex-col items-center justify-center px-[16px] sm:px-[40px] lg:p-[80px] py-[64px] relative shrink-0 w-full">
         <div className="content-stretch flex flex-col gap-[64px] items-center max-w-[1280px] relative shrink-0 w-full">
           <div className="content-stretch flex flex-col items-center relative shrink-0 w-full">
             <div className="content-stretch flex flex-col gap-[24px] items-center justify-center leading-[0] not-italic relative shrink-0 text-center w-full">
@@ -445,22 +445,26 @@ export default function Home() {
               </div>
             </motion.div>
           </div>
-          <motion.div className="bg-[#ebe610] content-stretch flex gap-[16px] items-center justify-center px-[24px] py-[16px] relative rounded-[40px] shrink-0 cursor-pointer" whileHover={{ scale: 1.04 }} whileTap={{ scale: 0.97 }}>
-            <p className="font-['Blinker',sans-serif] font-semibold leading-[normal] not-italic relative shrink-0 text-[#030001] text-[16px] uppercase whitespace-nowrap" style={{ fontFeatureSettings: "'ss04' 1, 'cv03' 1" }}>
-              QUERO AUMENTAR MINHAS VENDAS
-            </p>
-            <div className="content-stretch flex items-center relative rounded-[40px] shrink-0">
-              <div className="overflow-clip relative shrink-0 size-[24px]">
-                <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgButtonIcon} />
-                <div className="absolute inset-[9.39%_9.37%_9.37%_9.38%]">
-                  <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgVector3} />
+          <a href={waLink} target="_blank" rel="noopener noreferrer">
+            <div className="cta-border p-[2px] rounded-[40px]">
+              <motion.div className="bg-[#ebe610] content-stretch flex gap-[16px] items-center justify-center px-[24px] py-[16px] relative rounded-[38px] shrink-0 cursor-pointer" whileHover={{ scale: 1.04 }} whileTap={{ scale: 0.97 }}>
+                <p className="font-['Blinker',sans-serif] font-semibold leading-[normal] not-italic relative shrink-0 text-[#030001] text-[16px] uppercase whitespace-nowrap" style={{ fontFeatureSettings: "'ss04' 1, 'cv03' 1" }}>
+                  QUERO AUMENTAR MINHAS VENDAS
+                </p>
+                <div className="content-stretch flex items-center relative rounded-[40px] shrink-0">
+                  <div className="overflow-clip relative shrink-0 size-[24px]">
+                    <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgButtonIcon} />
+                    <div className="absolute inset-[9.39%_9.37%_9.37%_9.38%]">
+                      <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgVector3} />
+                    </div>
+                  </div>
                 </div>
-              </div>
+              </motion.div>
             </div>
-          </motion.div>
+          </a>
         </div>
       </div>
-      <div className="bg-[#1c0109] content-stretch flex flex-col items-center justify-center px-[16px] sm:px-[40px] lg:p-[80px] py-[64px] relative shrink-0 w-full">
+      <div id="porque-nos" className="bg-[#1c0109] content-stretch flex flex-col items-center justify-center px-[16px] sm:px-[40px] lg:p-[80px] py-[64px] relative shrink-0 w-full">
         <div className="content-stretch flex flex-col lg:flex-row gap-[48px] lg:gap-[80px] items-center justify-center max-w-[1280px] relative shrink-0 w-full">
           <div className="content-stretch flex flex-col items-center lg:items-start justify-center relative shrink-0">
             <div className="content-stretch flex flex-col gap-[24px] items-center justify-center leading-[0] not-italic relative shrink-0 w-full">
@@ -580,7 +584,7 @@ export default function Home() {
           </div>
         </div>
       </div>
-      <div className="bg-[#ff004f] content-stretch flex flex-col items-center justify-center px-[16px] sm:px-[40px] lg:p-[80px] py-[64px] relative shrink-0 w-full">
+      <div id="como-funciona" className="bg-[#ff004f] content-stretch flex flex-col items-center justify-center px-[16px] sm:px-[40px] lg:p-[80px] py-[64px] relative shrink-0 w-full">
         <div className="content-stretch flex flex-col gap-[72px] items-center max-w-[1280px] relative shrink-0 w-full">
           <div className="content-stretch flex flex-col items-center max-w-[1280px] relative shrink-0 w-full">
             <div className="flex flex-col font-['Blinker',sans-serif] font-bold justify-center leading-[0] not-italic relative shrink-0 text-[40px] text-white whitespace-nowrap">
@@ -660,19 +664,23 @@ export default function Home() {
               </div>
             </div>
           </div>
-          <div className="bg-[#ebe610] content-stretch flex gap-[16px] items-center justify-center px-[24px] py-[16px] relative rounded-[40px] shrink-0">
-            <p className="font-['Blinker',sans-serif] font-semibold leading-[normal] not-italic relative shrink-0 text-[#030001] text-[16px] uppercase whitespace-nowrap" style={{ fontFeatureSettings: "'ss04' 1, 'cv03' 1" }}>
-              falar com especialista da live hub
-            </p>
-            <div className="content-stretch flex items-center relative rounded-[40px] shrink-0">
-              <div className="overflow-clip relative shrink-0 size-[24px]">
-                <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgButtonIcon} />
-                <div className="absolute inset-[9.39%_9.37%_9.37%_9.38%]">
-                  <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgVector3} />
+          <a href={waLink} target="_blank" rel="noopener noreferrer">
+            <div className="cta-border p-[2px] rounded-[40px]">
+              <motion.div className="bg-[#ebe610] content-stretch flex gap-[16px] items-center justify-center px-[24px] py-[16px] relative rounded-[38px] shrink-0 cursor-pointer" whileHover={{ scale: 1.04 }} whileTap={{ scale: 0.97 }}>
+                <p className="font-['Blinker',sans-serif] font-semibold leading-[normal] not-italic relative shrink-0 text-[#030001] text-[16px] uppercase whitespace-nowrap" style={{ fontFeatureSettings: "'ss04' 1, 'cv03' 1" }}>
+                  falar com especialista da live hub
+                </p>
+                <div className="content-stretch flex items-center relative rounded-[40px] shrink-0">
+                  <div className="overflow-clip relative shrink-0 size-[24px]">
+                    <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgButtonIcon} />
+                    <div className="absolute inset-[9.39%_9.37%_9.37%_9.38%]">
+                      <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgVector3} />
+                    </div>
+                  </div>
                 </div>
-              </div>
+              </motion.div>
             </div>
-          </div>
+          </a>
         </div>
       </div>
       <div className="bg-[#030001] content-stretch flex flex-col items-center justify-center px-[16px] sm:px-[40px] lg:px-0 py-[64px] lg:py-[96px] relative shrink-0 w-full">
@@ -828,22 +836,26 @@ export default function Home() {
               </div>
             </div>
           </div>
-          <div className="bg-[#ebe610] content-stretch flex gap-[16px] items-center justify-center px-[24px] py-[16px] relative rounded-[40px] shrink-0">
-            <p className="font-['Blinker',sans-serif] font-semibold leading-[normal] not-italic relative shrink-0 text-[#030001] text-[16px] uppercase whitespace-nowrap" style={{ fontFeatureSettings: "'ss04' 1, 'cv03' 1" }}>
-              falar com especialista da live hub
-            </p>
-            <div className="content-stretch flex items-center relative rounded-[40px] shrink-0">
-              <div className="overflow-clip relative shrink-0 size-[24px]">
-                <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgButtonIcon} />
-                <div className="absolute inset-[9.39%_9.37%_9.37%_9.38%]">
-                  <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgVector3} />
+          <a href={waLink} target="_blank" rel="noopener noreferrer">
+            <div className="cta-border p-[2px] rounded-[40px]">
+              <motion.div className="bg-[#ebe610] content-stretch flex gap-[16px] items-center justify-center px-[24px] py-[16px] relative rounded-[38px] shrink-0 cursor-pointer" whileHover={{ scale: 1.04 }} whileTap={{ scale: 0.97 }}>
+                <p className="font-['Blinker',sans-serif] font-semibold leading-[normal] not-italic relative shrink-0 text-[#030001] text-[16px] uppercase whitespace-nowrap" style={{ fontFeatureSettings: "'ss04' 1, 'cv03' 1" }}>
+                  falar com especialista da live hub
+                </p>
+                <div className="content-stretch flex items-center relative rounded-[40px] shrink-0">
+                  <div className="overflow-clip relative shrink-0 size-[24px]">
+                    <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgButtonIcon} />
+                    <div className="absolute inset-[9.39%_9.37%_9.37%_9.38%]">
+                      <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgVector3} />
+                    </div>
+                  </div>
                 </div>
-              </div>
+              </motion.div>
             </div>
-          </div>
+          </a>
         </div>
       </div>
-      <div className="bg-[#030001] content-stretch flex flex-col items-center justify-center px-[16px] sm:px-[40px] md:px-[80px] lg:px-[160px] xl:px-[392.5px] py-[64px] lg:py-[96px] relative shrink-0 w-full">
+      <div id="faq" className="bg-[#030001] content-stretch flex flex-col items-center justify-center px-[16px] sm:px-[40px] md:px-[80px] lg:px-[160px] xl:px-[392.5px] py-[64px] lg:py-[96px] relative shrink-0 w-full">
         <div className="content-stretch flex flex-col gap-[64px] items-start max-w-[896px] relative shrink-0 w-full">
           <div className="content-stretch flex flex-col items-center relative shrink-0 w-full">
             <div className="flex flex-col font-['Blinker',sans-serif] font-bold justify-center leading-[0] not-italic relative shrink-0 text-[40px] text-white whitespace-nowrap">
@@ -984,16 +996,20 @@ export default function Home() {
                     </div>
                   </div>
                 </div>
-                <div className="bg-[#ebe610] content-stretch flex items-center justify-center px-[24px] py-[16px] relative rounded-[40px] shrink-0">
-                  <div className="content-stretch flex gap-[8px] items-center relative shrink-0">
-                    <p className="font-['Blinker',sans-serif] font-semibold leading-[normal] not-italic relative shrink-0 text-[#130106] text-[16px] uppercase whitespace-nowrap">
-                      contato
-                    </p>
-                    <div className="h-[19.498px] relative shrink-0 w-[19.5px]">
-                      <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgVector1} />
-                    </div>
+                <a href={waLink} target="_blank" rel="noopener noreferrer">
+                  <div className="cta-border p-[2px] rounded-[40px]">
+                    <motion.div className="bg-[#ebe610] content-stretch flex items-center justify-center px-[24px] py-[16px] relative rounded-[38px] shrink-0 cursor-pointer" whileHover={{ scale: 1.04 }} whileTap={{ scale: 0.97 }}>
+                      <div className="content-stretch flex gap-[8px] items-center relative shrink-0">
+                        <p className="font-['Blinker',sans-serif] font-semibold leading-[normal] not-italic relative shrink-0 text-[#130106] text-[16px] uppercase whitespace-nowrap">
+                          contato
+                        </p>
+                        <div className="h-[19.498px] relative shrink-0 w-[19.5px]">
+                          <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgVector1} />
+                        </div>
+                      </div>
+                    </motion.div>
                   </div>
-                </div>
+                </a>
               </div>
             </div>
           </div>
